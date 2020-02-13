@@ -1,0 +1,32 @@
+<clr-tree>
+  <clr-tree-node>
+    Config Status
+    <clr-tree-node *ngFor="let inf of info">
+      <clr-tree-node>
+        {{inf.date}}
+      </clr-tree-node>
+      <clr-tree-node>
+        {{inf.configName}}
+      </clr-tree-node>
+      <clr-tree-node>
+        {{inf.installMethod}}
+      </clr-tree-node>
+
+      <clr-tree-node *ngFor="let nod of inf.nodes">
+        <clr-tree-node>
+          {{nod.host}}
+        </clr-tree-node>
+        <clr-tree-node>
+          {{nod.status}}
+        </clr-tree-node>
+        <clr-tree-node>
+          {{nod.message}}
+        </clr-tree-node>
+      </clr-tree-node>
+
+      <clr-tree-node>
+        {{inf.installId}}
+      </clr-tree-node>
+    </clr-tree-node>
+  </clr-tree-node>
+</clr-tree>

@@ -1,0 +1,20 @@
+<clr-datagrid>
+  <clr-dg-column>configStatus</clr-dg-column>
+  <clr-dg-column>date</clr-dg-column>
+  <clr-dg-column>configName</clr-dg-column>
+  <clr-dg-column>installMethod</clr-dg-column>
+  <clr-dg-column>installId</clr-dg-column>
+
+  <clr-dg-row *ngFor="let inf of info">
+    <clr-dg-cell>{{inf.configStatus}}</clr-dg-cell>
+    <clr-dg-cell>{{inf.date}}</clr-dg-cell>
+    <clr-dg-cell>{{inf.configName}}</clr-dg-cell>
+    <clr-dg-cell>{{inf.installMethod}}</clr-dg-cell>
+    <clr-dg-cell>{{inf.installId}}</clr-dg-cell>
+<!--    <clr-dg-row *ngFor="let sub of inf.nodes">-->
+<!--      <clr-dg-cell>{{sub.host}}</clr-dg-cell>-->
+<!--      <clr-dg-cell>{{sub.status}}</clr-dg-cell>-->
+<!--      <clr-dg-cell>{{sub.message}}</clr-dg-cell>-->
+<!--    </clr-dg-row>-->
+  </clr-dg-row>
+</clr-datagrid>
